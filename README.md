@@ -107,9 +107,14 @@ ParkWise AI addresses these issues using a data-driven, predictive allocation ap
 ├── allocate_slot.py
 ├── generate_dataset.py
 ├── generate_slots.py
+├── train_model.py
+├── setup_database.py
+├── reset_database.py
+├── view_database.py
 ├── parking_model.pkl
 ├── parking_system.db
 ├── parking_slots_dataset.csv
+├── synthetic_parking_dataset.csv
 ├── static/
 ├── requirements.txt
 ```

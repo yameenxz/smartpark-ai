@@ -1,10 +1,44 @@
-# ParkWise AI – Intelligent Parking Allocation System
+# SmartPark AI – Intelligent Parking Allocation System
+
+> Smart parking system powered by machine learning for dynamic slot allocation and real-time monitoring.
+
+---
 
 ## Overview
 
-ParkWise AI is a machine learning-driven parking management system designed to optimize parking space utilization in commercial environments.
+SmartPark AI is a machine learning-driven parking management system designed to optimize parking space utilization in commercial environments.
 
 The system predicts vehicle dwell time using inputs such as vehicle type, arrival time, and visit purpose, and dynamically allocates parking slots to reduce congestion and improve efficiency.
+
+---
+
+## Academic Project Title
+
+A Machine Learning-Based System for Predictive, Vehicle-Type Aware Dynamic Allocation of Parking Spaces in Commercial Complexes
+
+---
+
+## Demo
+
+### Landing Page
+
+![Landing Page](assets/landing-page.png)
+
+### Vehicle Input & Selection
+
+![Vehicle Input](assets/vehicle-input.png)
+
+### Slot Assignment Result
+
+![Slot Assignment](assets/slot-assignment.png)
+
+### Live Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+### Parking Slot Grid
+
+![Slot Grid](assets/slot-grid.png)
 
 ---
 
@@ -16,7 +50,7 @@ Traditional parking systems rely on static allocation strategies, which often re
 * Increased congestion and waiting time
 * Lack of predictive insights
 
-ParkWise AI addresses these issues using a data-driven, predictive allocation approach.
+SmartPark AI addresses these issues using a data-driven, predictive allocation approach.
 
 ---
 
@@ -58,7 +92,7 @@ ParkWise AI addresses these issues using a data-driven, predictive allocation ap
 
 ## Key Features
 
-* Predictive parking duration
+* Predictive parking duration using ML
 * Intelligent slot allocation
 * Real-time database updates
 * Optimized allocation logic
@@ -98,7 +132,7 @@ ParkWise AI addresses these issues using a data-driven, predictive allocation ap
 
 ---
 
-## Project Structure
+## Repository Structure
 
 ```
 .
@@ -116,6 +150,7 @@ ParkWise AI addresses these issues using a data-driven, predictive allocation ap
 ├── parking_slots_dataset.csv
 ├── synthetic_parking_dataset.csv
 ├── static/
+├── assets/
 ├── requirements.txt
 ```
 
@@ -125,6 +160,7 @@ ParkWise AI addresses these issues using a data-driven, predictive allocation ap
 
 ```bash
 pip install -r requirements.txt
+python setup_database.py
 python generate_dataset.py
 python train_model.py
 python app.py
@@ -137,7 +173,7 @@ python app.py
 * Integration with real-time IoT sensors
 * Cloud deployment (AWS / GCP)
 * Analytics dashboard
-* Improved model accuracy
+* Improved model accuracy using real-world datasets
 
 ---
 

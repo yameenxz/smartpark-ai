@@ -56,27 +56,24 @@ SmartPark AI addresses these issues using a data-driven, predictive allocation a
 
 ## System Architecture
 
-### Machine Learning Model
+The system follows a modular architecture consisting of five main components:
 
-* Predicts parking duration based on:
+* **User Interface (Frontend):** Captures user input such as vehicle type, arrival time, and visit purpose
+* **Flask Backend (app.py):** Handles requests and coordinates system operations
+* **Machine Learning Model (Random Forest):** Predicts parking duration based on input features
+* **Allocation Engine:** Assigns optimal parking slots based on predicted duration and constraints
+* **SQLite Database:** Stores parking slot availability and updates in real time
 
-  * Vehicle type
-  * Arrival time
-  * Visit purpose
-* Trained on enhanced dataset
-* Achieved Mean Absolute Error ≈ 0.39 hours
+---
 
-### Allocation Engine
+## System Workflow
 
-* Dynamically assigns parking slots
-* Matches predicted duration with optimal slot zones
-* Optimized for efficient space utilization
-
-### Database Layer
-
-* SQLite-based backend
-* Maintains real-time slot availability
-* Updates dynamically after allocation
+1. User provides vehicle details through the interface
+2. Backend processes input and sends data to the ML model
+3. ML model predicts parking duration
+4. Allocation engine selects the most suitable parking slot
+5. Database updates slot availability dynamically
+6. Result is displayed to the user and reflected in the dashboard
 
 ---
 
@@ -90,45 +87,36 @@ SmartPark AI addresses these issues using a data-driven, predictive allocation a
 
 ---
 
+## Model Details
+
+* **Algorithm:** Random Forest Regressor
+* **Objective:** Predict parking duration
+* **Evaluation Metric:** Mean Absolute Error ≈ 0.39 hours
+
+### Features Used
+
+* Vehicle Type
+* Arrival Time
+* Visit Purpose
+
+---
+
+## Design Decisions
+
+* Used machine learning instead of rule-based logic to handle variability in parking behavior
+* Implemented modular architecture separating ML, allocation logic, and database layers
+* Chose SQLite for lightweight and efficient data management
+* Designed zone-based allocation strategy to improve parking efficiency and user convenience
+
+---
+
 ## Key Features
 
 * Predictive parking duration using ML
 * Intelligent slot allocation
 * Real-time database updates
 * Optimized allocation logic
-* Modular system design
-
----
-
-## Methodology
-
-### Data Engineering
-
-* Generated synthetic dataset
-* Added visit purpose feature
-* Improved dataset variability
-
-### Model Training
-
-* Implemented full ML pipeline
-* Preprocessed and structured features
-* Evaluated across multiple scenarios
-
-### System Integration
-
-* Integrated ML model with allocation engine
-* Ensured smooth module interaction
-
-### Testing & Validation
-
-* Tested across multiple input cases
-* Validated allocation and database logic
-
-### Optimization
-
-* Improved query performance
-* Refactored code for modularity
-* Enhanced system stability
+* Modular and scalable system design
 
 ---
 
